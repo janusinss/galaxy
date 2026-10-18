@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e0a1c" />
+      <stop offset="65%" stop-color="#05030a" />
+      <stop offset="100%" stop-color="#000000" />
+    </radialGradient>
+    <radialGradient id="coreGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="1" />
+      <stop offset="25%" stop-color="#5ee7ff" stop-opacity="0.95" />
+      <stop offset="55%" stop-color="#b26bff" stop-opacity="0.65" />
+      <stop offset="85%" stop-color="#ff5fa2" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#3d5bff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="arm1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5ee7ff" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#b26bff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ff5fa2" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="arm2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd2a1" stop-opacity="0.95" />
+      <stop offset="50%" stop-color="#ff6a3d" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#b26bff" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="1.8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Deep space backdrop -->
+  <circle cx="32" cy="32" r="30" fill="url(#bg)" stroke="rgba(255,255,255,0.18)" stroke-width="1.2" />
+
+  <!-- Background cosmic stars -->
+  <circle cx="16" cy="18" r="0.75" fill="#ffffff" opacity="0.85" />
+  <circle cx="48" cy="14" r="0.65" fill="#5ee7ff" opacity="0.9" />
+  <circle cx="50" cy="46" r="0.85" fill="#ffd2a1" opacity="0.9" />
+  <circle cx="15" cy="45" r="0.7" fill="#b26bff" opacity="0.8" />
+  <circle cx="28" cy="11" r="0.5" fill="#ffffff" opacity="0.7" />
+  <circle cx="38" cy="53" r="0.6" fill="#5ee7ff" opacity="0.7" />
+  <circle cx="11" cy="30" r="0.5" fill="#ff5fa2" opacity="0.7" />
+  <circle cx="53" cy="31" r="0.65" fill="#ffffff" opacity="0.8" />
+
+  <!-- Spiral galaxy arms with celestial glow -->
+  <g filter="url(#glow)">
+    <path d="M 32 32 C 32 23, 43 17, 49 23 C 55 29, 49 42, 39 46 C 26 50, 14 38, 16 26 C 18 14, 32 10, 42 12" 
+          fill="none" stroke="url(#arm1)" stroke-width="2.6" stroke-linecap="round" opacity="0.9" />
+
+    <path d="M 32 32 C 32 41, 21 47, 15 41 C 9 35, 15 22, 25 18 C 38 14, 50 26, 48 38 C 46 50, 32 54, 22 52" 
+          fill="none" stroke="url(#arm2)" stroke-width="2.3" stroke-linecap="round" opacity="0.85" />
+
+    <ellipse cx="32" cy="32" rx="16" ry="6.5" transform="rotate(-30 32 32)" 
+             fill="none" stroke="#5ee7ff" stroke-width="1.2" opacity="0.65" stroke-dasharray="3 2" />
+  </g>
+
+  <!-- Central luminous core -->
+  <circle cx="32" cy="32" r="11" fill="url(#coreGlow)" />
+
+  <!-- Astra singularity beacon -->
+  <circle cx="32" cy="32" r="2.5" fill="#ffffff" />
+  <path d="M 32 22 L 32 42 M 22 32 L 42 32" stroke="#ffffff" stroke-width="1.2" stroke-linecap="round" opacity="0.9" />
+  <path d="M 25 25 L 39 39 M 39 25 L 25 39" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round" opacity="0.6" />
+</svg>
